@@ -1,4 +1,8 @@
+import { Col, Row } from "antd";
 import Head from "next/head";
+import Logo from "../components/Logo";
+import SearchForm from "../components/SearchForm";
+import Toggle from "../components/Toggle";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -27,6 +31,15 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.container__modeToggler}>
+        <Toggle />
+      </div>
+      <Row align="middle" justify="center">
+        <Col lg={12}>
+          <Logo width={600} />
+        </Col>
+      </Row>
+      <SearchForm />
     </div>
   );
 }
