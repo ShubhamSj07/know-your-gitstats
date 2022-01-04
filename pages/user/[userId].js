@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "../../components/Header";
+// import Stats from "../../components/Stats";
 
 const userId = () => {
   return (
     <div>
-      <h1>User details!</h1>
+      <Header />
+      {/* <Stats /> */}
     </div>
   );
 };
