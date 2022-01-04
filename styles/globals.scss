@@ -30,16 +30,22 @@ html {
 
 body {
   padding: 0;
-  margin: 0;
   font-family: Poppins-Regular, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
-  background-color: #191917;
+  background-color: #191917 !important;
   color: #fff;
   letter-spacing: 1px;
+  max-width: 1200px;
+  margin: 0 auto !important;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::selection {
+  background-color: #4abc74 !important;
+  color: #fff;
 }
