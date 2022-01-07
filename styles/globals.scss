@@ -1,51 +1,133 @@
-@font-face {
-  font-family: "Poppins-Medium";
-  src: url("/fonts/Poppins-Medium.ttf");
-}
+@import "../utils/theme";
 
 @font-face {
-  font-family: "Poppins-Regular";
-  src: url("/fonts/Poppins-Regular.ttf");
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-Regular.woff2") format("woff2"),
+    url("/fonts/Inter/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins-SemiBold";
-  src: url("/fonts/Poppins-SemiBold.ttf");
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-Medium.woff2") format("woff2"),
+    url("/fonts/Inter/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+@font-face {
+  font-family: "SF Mono";
+  src: url("/fonts/SFMono/SFMono-Medium.woff2") format("woff2"),
+    url("/fonts/SFMono/SFMono-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
 html {
   box-sizing: border-box;
 }
 
-body {
-  padding: 0;
-  font-family: Poppins-Regular, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
-  background-color: #191917 !important;
-  color: #fff;
-  letter-spacing: 1px;
-  max-width: 1200px;
-  margin: 0 auto !important;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 ::selection {
-  background-color: #4abc74 !important;
-  color: #fff;
+  background-color: $blue;
+  color: $white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $inter;
+  color: $darkGrey;
+  background-color: $offWhite;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  transition: $transition;
+  color: $blue;
+  display: inline-block;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+svg {
+  fill: #d53a9d;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0px;
+  transition: $transition;
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+}
+
+input {
+  border-radius: 0;
+  outline: 0;
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus,
+  &:active {
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+}
+
+/* scrollbar styles */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #27292d;
+  border-left: 4px solid #27292d;
+  border-right: 4px solid #27292d;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#383a40, #494d53);
+  border-left: 5px solid #27292d;
+  border-right: 5px solid #27292d;
+  border-radius: #27292d;
+  border-radius: 10px;
 }
