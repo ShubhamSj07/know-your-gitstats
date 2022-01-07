@@ -1,0 +1,50 @@
+@import "../utils/theme";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  background-image: linear-gradient($black 0%, $darkGrey 100%);
+  color: #f6f8fa;
+  height: 100vh;
+
+  form {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 20vh;
+    max-width: 600px;
+    text-align: center;
+    svg {
+      color: #d53a9d;
+      font-size: 5em;
+    }
+    label {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin: 2rem;
+    }
+
+    input {
+      background-color: #26303c;
+      outline: 0;
+      // border: 0;
+      border-radius: 0.25rem;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1rem;
+      border: 10px solid;
+      border-image-slice: 1;
+      border-width: 4px;
+      border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+      color: #c8e1ff75;
+      font-family: $mono;
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}
