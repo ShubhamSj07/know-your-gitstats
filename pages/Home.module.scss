@@ -17,7 +17,7 @@
     max-width: 600px;
     text-align: center;
     svg {
-      color: #d53a9d;
+      color: $svgColor;
       font-size: 5em;
     }
     label {
@@ -25,6 +25,11 @@
       font-size: 2.5rem;
       font-weight: 500;
       margin: 2rem;
+
+      @media screen and (max-width: 578px) {
+        margin: 2rem 0;
+        font-size: 1.8rem;
+      }
     }
 
     input {
@@ -39,7 +44,7 @@
       border: 10px solid;
       border-image-slice: 1;
       border-width: 4px;
-      border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+      border-image-source: linear-gradient(to left, #743ad5, $svgColor);
       color: #c8e1ff75;
       font-family: $mono;
       font-size: 2rem;
