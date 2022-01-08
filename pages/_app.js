@@ -1,13 +1,7 @@
-import { ThemeProvider } from "../context/ThemeContext";
 import "../styles/globals.scss";
-import "antd/dist/antd.css";
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <ThemeProvider>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  );
+const MyApp = ({ Component, pageProps }) => {
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
