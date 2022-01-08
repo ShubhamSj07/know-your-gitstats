@@ -1,0 +1,30 @@
+@import "../utils/theme";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 5rem;
+  color: #fff;
+  background-color: #27292d;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2em;
+
+  //   ${media.bp900`
+  //     padding: 2rem;
+  //   `};
+  //   ${media.bp400`
+  //     padding: 1rem;
+  //   `};
+
+  a {
+    padding: 5px;
+    color: $svgColor;
+    font-family: $mono;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
