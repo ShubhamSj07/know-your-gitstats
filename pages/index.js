@@ -21,6 +21,7 @@ const Home = () => {
         <form onSubmit={onSubmit}>
           <FaGithubAlt /> <MdQueryStats />
           <label htmlFor="username">Know your gitstats</label>
+          <span>Enter Github Username</span>
           <input
             name="username"
             placeholder="ex: shubhamsj07"

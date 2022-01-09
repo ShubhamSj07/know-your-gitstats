@@ -16,10 +16,20 @@
     margin-bottom: 20vh;
     max-width: 600px;
     text-align: center;
+
     svg {
       color: $svgColor;
       font-size: 5em;
     }
+
+    span {
+      background: #303c4a;
+      padding: 0.5em 1em;
+      font-family: $mono;
+      color: #c8e1ff;
+      border-radius: 6px;
+    }
+
     label {
       display: block;
       font-size: 2.5rem;
@@ -39,7 +49,7 @@
       border-radius: 0.25rem;
       width: 100%;
       max-width: 500px;
-      margin: 0 auto;
+      margin: 1em auto;
       padding: 1rem;
       border: 10px solid;
       border-image-slice: 1;
