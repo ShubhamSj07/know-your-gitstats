@@ -1,0 +1,44 @@
+@import "../utils/theme";
+
+.error__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  background-color: $black;
+  background-image: linear-gradient($black 0%, $darkGrey 100%);
+  color: #f6f8fa;
+  height: 100vh;
+  padding: 3em;
+  font-size: 1.5rem;
+
+  button {
+    font-family: $mono;
+    padding: 1em 3em;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  .logo {
+    svg {
+      color: $svgColor;
+      font-size: 3em;
+    }
+  }
+
+  p {
+    font-family: $mono;
+    font-size: 1rem;
+  }
+  a {
+    color: $blue;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
