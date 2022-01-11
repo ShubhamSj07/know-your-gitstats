@@ -3,7 +3,7 @@
 </p>
 
 <h4 align="center">
-  <a href="https://know-your-gitstats.vercel.app">Website</a>
+  <a href="https://know-your-gitstats.vercel.app">know-your-gitstats</a>
 </h4>
   
 A web application to 🔍inspect your ```GitHub Profile Stats```📊 in a lucid way. ```Visualization``` made easy with ```Charts```💡🚀.
