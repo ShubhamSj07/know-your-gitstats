@@ -50,7 +50,7 @@
       width: 100%;
       max-width: 500px;
       margin: 1em auto;
-      padding: 1em;
+      padding: 1rem;
       border: 10px solid;
       border-image-slice: 1 !important;
       border-width: 4px;
@@ -63,6 +63,9 @@
 
       &:focus {
         color: $offBlue;
+      }
+      &[type="text"] {
+        text-transform: lowercase;
       }
     }
   }
