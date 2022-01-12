@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  GoTrashcan,
   GoRepoForked,
   GoRepoPush,
   GoStar,
-  GoBook,
   GoCommentDiscussion,
   GoIssueClosed,
   GoIssueOpened,
@@ -14,9 +12,11 @@ import styles from "./Activities.module.scss";
 const Activities = ({ activityData }) => {
   const extractActivity = () => {
     const message = activityData.map(activity => {
+      // console.log({ activity });
+
       let icon = "";
       let action = "";
-      let actionPerformed; // For Pull req
+      let actionPerformed;
       let repoName = activity.repo.name;
       let time = new Date(activity.created_at)
         .toDateString()
@@ -28,8 +28,7 @@ const Activities = ({ activityData }) => {
         case "PushEvent":
           icon = <GoRepoPush />;
           let commit = "commit";
-          let branch = activity.payload.ref.slice(11);
-
+          let branch = activity.payload.ref.slice(11); // extract branch name ->> "refs/heads/main"
           if (activity.payload.size > 1) {
             commit = "commits";
           }
@@ -39,19 +38,6 @@ const Activities = ({ activityData }) => {
         case "WatchEvent":
           icon = <GoStar />;
           action = "Starred the repository ";
-          break;
-
-        case "ReleaseEvent":
-          icon = <GoBook />;
-          actionPerformed =
-            activity.payload.action.charAt(0).toUpperCase() +
-            activity.payload.action.slice(1);
-
-          action = `${actionPerformed} a release in `;
-          break;
-        case "DeleteEvent":
-          icon = <GoTrashcan />;
-          action = `Deleted a ${activity.payload.ref_type} ${activity.payload.ref} from `;
           break;
 
         case "ForkEvent":
@@ -65,7 +51,6 @@ const Activities = ({ activityData }) => {
           actionPerformed =
             activity.payload.action.charAt(0).toUpperCase() +
             activity.payload.action.slice(1);
-
           action = `${actionPerformed} a comment on an issue in `;
           break;
 
@@ -78,7 +63,6 @@ const Activities = ({ activityData }) => {
           actionPerformed =
             activity.payload.action.charAt(0).toUpperCase() +
             activity.payload.action.slice(1);
-
           action = `${actionPerformed} an issue in `;
           break;
 
@@ -91,12 +75,12 @@ const Activities = ({ activityData }) => {
     return message;
   };
 
-  const buildActivityList = () => {
+  const activityList = () => {
     const messages = extractActivity();
-    // console.log(messages);
+    // console.log({messages});
     if (messages.length > 0) {
-      return messages.map(message => (
-        <li key={message?.id}>
+      return messages.map((message, index) => (
+        <li key={index}>
           <a
             href={`https://github.com/${message.repoName}`}
             target="_blank"
@@ -132,7 +116,7 @@ const Activities = ({ activityData }) => {
       <header>
         <h2>Top Activities</h2>
       </header>
-      <div className={styles.activity__list}>{buildActivityList()}</div>
+      <div className={styles.activity__list}>{activityList()}</div>
     </div>
   );
 };

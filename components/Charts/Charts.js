@@ -4,8 +4,8 @@ import styles from "./Charts.module.scss";
 import sectionStyles from "../UserRepos/UserRepos.module.scss";
 
 const Charts = ({ langData, repoData }) => {
-  console.log(langData);
-  console.log(repoData);
+  // console.log(langData);
+  // console.log(repoData);
 
   // create chart with languageData
   const [langChartData, setLangChartData] = useState(null);

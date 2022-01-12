@@ -12,7 +12,7 @@
   color: #f6f8fa;
   height: 100vh;
   padding: 3em;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 
   button {
     font-family: $mono;
@@ -32,10 +32,10 @@
 
   p {
     font-family: $mono;
-    font-size: 1rem;
+    font-size: 1em;
   }
   a {
-    color: $blue;
+    color: $purple;
     &:hover,
     &:focus {
       text-decoration: underline;

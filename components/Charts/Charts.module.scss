@@ -2,30 +2,23 @@
 
 .chartStyles {
   max-width: 1200px !important;
-  // margin-top: -8rem !important;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 2em;
   justify-content: center;
-  //   ${media.bp900`
-  //     justify-items: center;
-  //   `};
 
   .chart {
     background-color: $black;
     max-width: 500px;
-    padding: 2rem;
-    border-radius: 0.25rem;
+    padding: 2em;
+    border-radius: 0.25em;
     box-shadow: 0 5px 30px -15px rgba(0, 0, 0, 0.2);
-    // ${media.bp400`
-    //   padding: 2rem 1rem;
-    // `};
 
     header {
       display: flex;
       justify-content: space-between;
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.5em;
       }
     }
     p {

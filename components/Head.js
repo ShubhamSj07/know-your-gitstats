@@ -5,7 +5,7 @@ const defaultTitle = "Know your gitstats";
 const defaultDescription =
   "A web application to 🔍inspect your GitHub Profile Stats📊 in a lucid way. Visualization made easy with Charts💡🚀.";
 const defaultOGURL = "https://know-your-gitstats.vercel.app";
-const defaultOGImage = "../public/kYGSView.png";
+const defaultOGImage = "https://know-your-gitstats.vercel.app/view.png";
 
 const Head = props => {
   return (

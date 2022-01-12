@@ -1,21 +1,10 @@
 @import "../utils/theme";
 
 .section {
-  padding: 3rem 5rem;
-
-  //   ${media.bp900`
-  //     padding: 2rem;
-  //   `};
-  //   ${media.bp400`
-  //     padding: 1rem;
-  //   `};
+  padding: 3em 5em;
 
   background-color: $black;
   color: $offBlue;
-  //   ${media.bp900`
-  //     padding-top: 2rem;
-  //     padding-bottom: 10rem;
-  //   `};
 
   & > div {
     max-width: 1400px;
@@ -25,12 +14,12 @@
   header {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
 
     h2 {
       display: inline-block;
       margin: 0;
-      font-size: 1.75rem;
+      font-size: 1.75em;
       background-image: linear-gradient(
         90deg,
         #d1d5da 50%,
@@ -40,9 +29,6 @@
       background-repeat: repeat-x;
       background-size: 10px 2px;
       padding-bottom: 6px;
-      //   ${media.bp600`
-      //     font-size: 1.5rem;
-      //   `};
     }
   }
 
@@ -50,35 +36,32 @@
     .dropdown__wrapper {
       display: flex;
       align-items: center;
-      font-size: 1rem;
+      font-size: 1em;
       color: $darkGrey;
 
       .label {
         color: #fff;
-        margin: 0 1rem;
+        margin: 0 1em;
       }
     }
     .repo__list {
       ul {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 1rem;
+        grid-gap: 1em;
 
         li {
           .repo {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
-            padding: 2rem;
+            padding: 2em;
             height: 100%;
             color: $white;
             background-color: #383a40;
-            border-radius: 0.5rem;
+            border-radius: 0.5em;
             box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
             transition: all 200ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
-            //   ${media.bp600`
-            //     padding: 1.5rem;
-            //   `};
 
             &:hover,
             &:focus {
@@ -92,7 +75,7 @@
               white-space: nowrap;
               text-overflow: ellipsis;
               color: $offWhite;
-              margin-bottom: 0.75rem;
+              margin-bottom: 0.75em;
               font-size: 20px;
               font-family: $mono;
               font-weight: 700;
@@ -101,20 +84,22 @@
 
             p {
               font-size: 14px;
-              margin-bottom: 2rem;
+              margin-bottom: 2em;
             }
 
             &__header {
-              margin-bottom: 2rem;
+              margin-bottom: 2em;
             }
 
             &__name {
               display: flex;
               align-items: center;
+
               svg {
-                margin-right: 0.5rem;
+                margin-right: 0.5em;
                 min-width: 16px;
               }
+
               h3 {
                 margin: 0;
               }
@@ -134,16 +119,18 @@
                 span {
                   display: flex;
                   align-items: center;
-                  margin-right: 0.75rem;
+                  margin-right: 0.75em;
+
                   svg {
-                    margin-right: 0.25rem;
+                    margin-right: 0.25em;
                   }
+
                   .language {
                     border-radius: 100%;
                     width: 10px;
                     height: 10px;
-                    background-color: $blue;
-                    margin-right: 0.25rem;
+                    background-color: $purple;
+                    margin-right: 0.25em;
                   }
                 }
               }
@@ -178,8 +165,9 @@
           background: $darkGrey;
         }
         svg {
-          margin-left: 0.5rem;
+          margin-left: 0.5em;
         }
+
         label {
           transition: $transition;
           cursor: pointer;
@@ -196,27 +184,28 @@
         opacity: 0;
         visibility: hidden;
       }
+
       .dropdown__list__item {
         transition: $transition;
-        &:hover,
-        &:focus {
-          background-color: #c8e1ff96;
-        }
 
         button {
           color: $white;
           background: #494d53;
           padding: 10px 7px;
+          margin-bottom: 1px;
           width: 100%;
           font-size: 14px;
-          border-bottom: 1px solid $grey2;
+          border-radius: 3px;
+          border-bottom: 1px solid $lightGrey;
           font-weight: 500;
           line-height: 1;
+          outline: none;
           text-align: left;
 
           &:hover,
           &:focus {
-            background: $darkGrey;
+            background-color: $lightGrey;
+            transform: scale(0.9);
           }
         }
       }
@@ -225,6 +214,7 @@
         opacity: 1;
         visibility: visible;
       }
+
       .dropdown__button {
         background: #494d53;
         svg {
@@ -235,6 +225,6 @@
   }
 
   @media screen and (max-width: 578px) {
-    padding: 3rem 2rem;
+    padding: 3em 2em;
   }
 }

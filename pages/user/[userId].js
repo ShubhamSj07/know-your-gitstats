@@ -32,7 +32,7 @@ const User = props => {
   const getUserData = useCallback(() => {
     fetch(`${API}/${username}`)
       .then(res => {
-        console.log(res);
+        // console.log(res);
         if (res.status === 404) {
           setLoading(false);
           return setError({ active: true, type: 404 });

@@ -35,15 +35,13 @@ html {
 }
 
 ::selection {
-  background-color: $blue;
+  background-color: $purple;
   color: $white;
 }
 
 body {
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-family: $inter;
   color: $darkGrey;
   background-color: $offWhite;
@@ -55,8 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 auto 1em auto;
   font-weight: 500;
 }
 
@@ -67,7 +64,7 @@ p {
 a {
   text-decoration: none;
   transition: $transition;
-  color: $blue;
+  color: $purple;
   display: inline-block;
 }
 
@@ -93,6 +90,7 @@ button {
   border: 0;
   border-radius: 0px;
   transition: $transition;
+
   &:focus,
   &:active {
     outline: 0;
@@ -102,6 +100,7 @@ button {
 input {
   border-radius: 0;
   outline: 0;
+
   &:focus {
     outline: 0;
   }
@@ -119,11 +118,13 @@ input {
   width: 15px;
   height: 4px;
 }
+
 ::-webkit-scrollbar-track {
   background: #27292d;
   border-left: 4px solid #27292d;
   border-right: 4px solid #27292d;
 }
+
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(#383a40, #494d53);
   border-left: 5px solid #27292d;

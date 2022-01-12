@@ -12,7 +12,7 @@
   form {
     background-color: transparent;
     border-radius: 5px;
-    padding: 2rem;
+    padding: 2em;
     margin-bottom: 20vh;
     max-width: 600px;
     text-align: center;
@@ -26,19 +26,19 @@
       background: #303c4a;
       padding: 0.5em 1em;
       font-family: $mono;
-      color: #c8e1ff;
+      color: $offBlue;
       border-radius: 6px;
     }
 
     label {
       display: block;
-      font-size: 2.5rem;
+      font-size: 2.5em;
       font-weight: 500;
-      margin: 2rem;
+      margin: 2em;
 
       @media screen and (max-width: 578px) {
-        margin: 2rem 0;
-        font-size: 1.8rem;
+        margin: 2em 0;
+        font-size: 1.8em;
       }
     }
 
@@ -46,18 +46,18 @@
       background-color: #26303c;
       outline: 0;
       // border: 0;
-      border-radius: 0.25rem;
+      border-radius: 0.25em;
       width: 100%;
       max-width: 500px;
       margin: 1em auto;
-      padding: 1rem;
+      padding: 1em;
       border: 10px solid;
       border-image-slice: 1;
       border-width: 4px;
-      border-image-source: linear-gradient(to left, #743ad5, $svgColor);
+      border-image-source: linear-gradient(to left, $purple, $svgColor);
       color: #c8e1ff75;
       font-family: $mono;
-      font-size: 2rem;
+      font-size: 2em;
       font-weight: 400;
       text-align: center;
 

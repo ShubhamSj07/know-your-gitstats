@@ -6,7 +6,6 @@ import { VscCalendar } from "react-icons/vsc";
 import styles from "./UserProfileInfo.module.scss";
 
 const UserProfileInfo = ({ userData }) => {
-
   return (
     <div className={styles.section}>
       <div className={styles.userInfo}>
@@ -53,23 +52,27 @@ const UserProfileInfo = ({ userData }) => {
         </div>
         <div className={styles.stats}>
           <div className={styles.stats__item}>
-            <span className="num">
+            <span className={styles.num}>
               {userData?.public_repos.toLocaleString()}
             </span>
-            <span className="num-label">Repositories</span>
+            <span className={styles.num_label}>Repositories</span>
           </div>
           <div className={styles.stats__item}>
-            <span className="num">{userData?.followers.toLocaleString()}</span>
-            <span className="num-label">Followers</span>
+            <span className={styles.num}>
+              {userData?.followers.toLocaleString()}
+            </span>
+            <span className={styles.num_label}>Followers</span>
           </div>
           <div className={styles.stats__item}>
-            <span className="num">{userData?.following.toLocaleString()}</span>
-            <span className="num-label">Following</span>
+            <span className={styles.num}>
+              {userData?.following.toLocaleString()}
+            </span>
+            <span className={styles.num_label}>Following</span>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default UserProfileInfo;
