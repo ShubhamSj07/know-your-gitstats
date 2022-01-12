@@ -32,13 +32,18 @@ const UserProfileInfo = ({ userData }) => {
         </h2>
         <div className={styles.info}>
           <span className={styles.info__item}>
-            {userData?.company && <BsBriefcase />}
-            {userData?.company}
+            {userData?.company && (
+              <>
+                <BsBriefcase /> {userData?.company}
+              </>
+            )}
           </span>
           <span className={styles.info__item}>
-            {userData?.company && <MdOutlineLocationOn />}
-            <MdOutlineLocationOn />
-            {userData?.location}
+            {userData?.location && (
+              <>
+                <MdOutlineLocationOn /> {userData?.location}
+              </>
+            )}
           </span>
           <span className={styles.info__item}>
             <VscCalendar />
