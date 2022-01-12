@@ -52,7 +52,7 @@
       margin: 1em auto;
       padding: 1em;
       border: 10px solid;
-      border-image-slice: 1;
+      border-image-slice: 1 !important;
       border-width: 4px;
       border-image-source: linear-gradient(to left, $purple, $svgColor);
       color: #c8e1ff75;
